@@ -11,7 +11,7 @@
       text-align: center;
       color: white;
 
-      /* 🌸 BACKGROUND IMAGE */
+      /* 🌸 BACKGROUND */
       background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
       background-size: cover;
       background-position: center;
@@ -19,33 +19,58 @@
     }
 
     .overlay {
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.45);
       min-height: 100vh;
-      padding: 50px;
+      padding: 60px 20px;
     }
 
     h1 {
-      font-size: 50px;
+      font-size: 55px;
       margin-top: 80px;
+      color: #ffb6c1;
+      text-shadow: 2px 2px 10px black;
     }
 
     p {
       font-size: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.15);
+      padding: 30px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 40px;
+      backdrop-filter: blur(8px);
     }
 
     button {
-      margin-top: 20px;
-      padding: 12px 20px;
+      margin-top: 25px;
+      padding: 12px 25px;
       border: none;
-      border-radius: 20px;
+      border-radius: 25px;
       background: pink;
-      cursor: pointer;
       font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
     button:hover {
       background: hotpink;
       color: white;
+      transform: scale(1.1);
+    }
+
+    .heart {
+      font-size: 30px;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
   </style>
 </head>
@@ -54,16 +79,22 @@
 
   <div class="overlay">
 
-    <h1>Happy Monthsary ❤️</h1>
+    <div class="card">
 
-    <p>
-      Another month with you feels like a blessing.<br>
-      Thank you for making me happy every day 💕
-    </p>
+      <div class="heart">❤️</div>
 
-    <button onclick="alert('I love you so much ❤️')">
-      Click this, love
-    </button>
+      <h1>Happy Monthsary</h1>
+
+      <p>
+        Another month with you, and I still choose you every day 💕<br>
+        Thank you for making my life brighter and happier.
+      </p>
+
+      <button onclick="alert('I love you so much ❤️🥺')">
+        Click me, love
+      </button>
+
+    </div>
 
   </div>
 

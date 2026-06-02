@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Memories ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 50px;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  width: 250px;
+}
+
+/* hearts */
+.heart {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: hotpink;
+  transform: rotate(45deg);
+  animation: float 6s infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) rotate(45deg); }
+  100% { transform: translateY(-10vh) rotate(45deg); }
+}
+</style>
+</head>
+
+<body>
+
+<script>
+for(let i=0;i<20;i++){
+  let h = document.createElement("div");
+  h.className = "heart";
+  h.style.left = Math.random()*100+"vw";
+  h.style.animationDuration = (3+Math.random()*5)+"s";
+  document.body.appendChild(h);
+}
+</script>
+
+<div class="container">
+
+  <h1>Our Memories 📸</h1>
+
+  <div class="card">
+    <p>📍 Lagay mo pic nyo dito later</p>
+  </div>
+
+  <div class="card">
+    <p>💌 Message mo bawat memory</p>
+  </div>
+
+  <div class="card">
+    <p>❤️ More photos next page</p>
+  </div>
+
+</div>
+
+</body>
+</html>
